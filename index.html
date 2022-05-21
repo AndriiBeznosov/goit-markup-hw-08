@@ -20,7 +20,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body menu-hidden>
     <header class="header">
       <div class="container header__container">
         <!-- logo -->
@@ -28,14 +28,22 @@
           <span class="logo-header__color">Web</span>
           Studio
         </a>
-        <button class="header-btm" type="button" aria-label="Переключатель мобильного меню">
+        <button
+          class="header-btm"
+          type="button"
+          aria-controls="nav"
+          aria-label="Переключатель мобильного меню"
+          aria-expanded="false"
+          data-menu-button
+          data-menu-hidden
+        >
           <svg class="header-btm__icon" width="40" height="40">
             <use class="header-btm__icon-menu" href="./images/icons.svg#icon-menu_40px"></use>
             <use class="header-btm__icon-close" href="./images/icons.svg#icon-close_40px"></use>
           </svg>
         </button>
         <!-- Menu -->
-        <nav class="nav">
+        <nav class="nav" data-menu id="nav">
           <ul class="nav-table">
             <li class="nav-table__item">
               <a class="nav-table__link nav-table__link--activ" href="./index.html"> Студия </a>
@@ -49,30 +57,32 @@
           </ul>
 
           <!-- Header-contacts -->
-          <ul class="contacts">
-            <li class="contacts__item">
-              <a class="contacts__link contacts__link--mail" href="mailto:info@devstudio.com">
-                <svg class="contacts__icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-mail"></use>
-                </svg>
-                info@devstudio.com
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__link contacts__link--tel" href="tel:+380961111111">
-                <svg class="contacts__icon" width="16" height="16">
-                  <use href="./images/icons.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11
-              </a>
-            </li>
-          </ul>
-          <ul class="soc">
-            <li class="soc__item"><a class="soc__link" href="">Instagram</a></li>
-            <li class="soc__item"><a class="soc__link" href="">Twitter</a></li>
-            <li class="soc__item"><a class="soc__link" href="">Facebook</a></li>
-            <li class="soc__item"><a class="soc__link" href="">LinkedIn</a></li>
-          </ul>
+          <div>
+            <ul class="contacts">
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--mail" href="mailto:info@devstudio.com">
+                  <svg class="contacts__icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-mail"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--tel" href="tel:+380961111111">
+                  <svg class="contacts__icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+            <ul class="soc">
+              <li class="soc__item"><a class="soc__link" href="">Instagram</a></li>
+              <li class="soc__item"><a class="soc__link" href=""> <span class="soc__span"></span> Twitter</a></li>
+              <li class="soc__item"><a class="soc__link" href=""> <span class="soc__span"></span> Facebook</a></li>
+              <li class="soc__item"><a class="soc__link" href=""> <span class="soc__span"></span> LinkedIn</a></li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -502,5 +512,6 @@
     </div>
     <!-- JS -->
     <script src="./js/modal.js"></script>
+    <script src="./js/modal-mobil.js"></script>
   </body>
 </html>

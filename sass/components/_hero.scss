@@ -10,6 +10,13 @@
   background-position: center;
   background-size: cover;
   text-align: center;
+  @include tablet {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/fon-img-tablet.jpeg);
+    max-width: 768px;
+    height: 400px;
+  }
+
   //   padding: 200px 0;
 }
 

@@ -21,6 +21,15 @@ body {
   background-color: var(--primary-whity-color);
   color: var(--primary-text-color);
 }
+
+
+@media screen and (max-width:767px) {
+  .menu-open {
+    overflow: hidden;
+  }
+}
+
+
 img {
   display: block;
   max-width: 100%;

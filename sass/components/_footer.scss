@@ -2,12 +2,19 @@
   background-color: var(--bgr-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 .footer__container {
   display: flex;
-  align-items: baseline;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
-/* Footer address */
+// /* Footer address */
 
 .footer__address {
   font-style: normal;
@@ -17,11 +24,16 @@
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: var(--primary-whity-color);
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-contact__item:last-child {
-  margin-top: 9px;
+  margin-top: 8px;
 }
 
 .footer-contact__link {

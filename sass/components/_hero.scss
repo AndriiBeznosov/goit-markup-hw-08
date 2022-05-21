@@ -1,25 +1,38 @@
 .hero {
   background-color: #c4c4c4;
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/fon-img.jpeg);
+    url(../images/fon-img-mobile.jpeg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   text-align: center;
-  padding: 200px 0;
+  //   padding: 200px 0;
 }
+
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.363;
-  text-align: center;
+  font-size: 26px;
+  line-height: 1.62;
+  //   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-whity-color);
+  padding-top: 118px;
 }
+
+// .hero__title {
+//   font-weight: 900;
+//   font-size: 44px;
+//   line-height: 1.363;
+//   text-align: center;
+//   letter-spacing: 0.06em;
+//   text-transform: uppercase;
+//   color: var(--primary-whity-color);
+// }
 
 .hero__btm {
   background-color: var(--accent-color);

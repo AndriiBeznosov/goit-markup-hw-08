@@ -1,15 +1,16 @@
 .header__container {
   display: flex;
-  position: relative;
+
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .header-btm {
     position: absolute;
-
     top: 0;
     right: 0;
-
     background-color: transparent;
     border: 0;
     padding: 10px 0;
@@ -23,19 +24,26 @@
       fill: var(--accent-color);
     }
   }
+}
 
-  
-  .header-btm .header-btm__icon-close {
+@include tablet {
+  .header-btm {
     display: none;
   }
-  .header-btm.is-open .header-btm__icon-close {
-    display: block;
-  }
-  .header-btm.is-open .header-btm__icon-menu {
-    display: none;
-  }
+}
 
-  .nav {
+.header-btm .header-btm__icon-close {
+  display: none;
+}
+.header-btm.is-open .header-btm__icon-close {
+  display: block;
+}
+.header-btm.is-open .header-btm__icon-menu {
+  display: none;
+}
+
+.nav {
+  @include mobile-max {
     position: fixed;
     top: 0;
     left: 50%;
@@ -44,29 +52,41 @@
     padding: 48px 40px;
     background-color: #ffffff;
     width: 480px;
-  }
-  .nav.is-open {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 609px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
-  .nav-table {
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @include tablet {
     display: flex;
+  }
+}
+
+.nav-table {
+  display: flex;
+  
+
+  @include mobile-max {
     flex-direction: column;
   }
-  .nav-table__item {
+}
+
+.nav-table__item {
+  @include mobile-max {
     &:not(:last-child) {
       margin-bottom: 32px;
     }
   }
-}
-@media screen and (min-width: 768px) {
-  .header-btm {
-    display: none;
+  @include tablet {
+    margin-right: 50px;
+    &:last-child {
+      margin-right:0;
+    }
   }
 }
 
@@ -82,12 +102,20 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.142;
+    padding: 32px 0;
+    display: block;
+    position: relative;
+  }
+
   &:hover,
   &:focus {
     color: var(--accent-color);
     fill: var(--accent-color);
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       &::after {
         content: '';
         display: block;
@@ -115,7 +143,7 @@
 .nav-table__link--activ {
   color: var(--accent-color);
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     &::after {
       content: '';
       display: block;
@@ -131,22 +159,42 @@
   }
 }
 
-.contacts {
-  display: flex;
-  flex-direction: column-reverse;
-  // margin-top: 302px;
+.container-box {
+  @include tablet {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 63px;
+  }
 }
 
-// .contacts__item:first-child {
-//   margin-right: 50px;
-// }
+.contacts {
+  display: flex;
+
+  @include tablet-max {
+    flex-direction: column-reverse;
+  }
+
+   @media screen and (min-width:768px) and (max-width:1199px) {
+    &__item:last-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+@include desktop {
+  .contacts__item:first-child {
+    margin-right: 50px;
+  }
+}
+
 
 .contacts__link {
   display: flex;
   align-items: center;
   font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
+  font-size: 12px;
+  line-height: calc(14 / 12);
   letter-spacing: 0.02em;
   color: var(--link-color);
   fill: var(--link-color);
@@ -171,7 +219,6 @@
   }
 
   @media screen and (min-width: 768px) {
-    padding: 32px 0;
     transition-property: color, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -181,6 +228,9 @@
       color: var(--accent-color);
       fill: var(--accent-color);
     }
+  }
+  @include desktop {
+    padding: 32px 0;
   }
 }
 
@@ -226,123 +276,5 @@
   transform: rotate(90deg);
   transform-origin: top left;
 }
-// svg:not(:root) {
-//   overflow: hidden;
-// }
-// @include tablet {
 
-   
-// .header__container {
-//   display: flex;
-// }
-// .header-logo {
- 
-//   color: var(--logo-color);
- 
-//   padding-top: 24px;
-//   margin-right: 93px;
-//   padding-bottom: 25px;
-// }
-// .header-logo__color {
-//   color: var(--accent-color);
-// }
 
-// .nav-table {
-//   display: flex;
-// }
-// .nav-table__item {
-//   margin-right: 50px;
-//   &:last-child {
-//     margin-right: 0;
-//   }
-// }
-
-// .nav-table__link {
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.142;
-//   letter-spacing: 0.02em;
-//   color: var(--primary-text-color);
-//   text-decoration: none;
-//   padding: 32px 0;
-//   display: block;
-//   position: relative;
-//   transition-property: color;
-//   transition-duration: 250ms;
-//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-//   &:hover,
-//   &:focus {
-//     color: var(--accent-color);
-//     fill: var(--accent-color);
-    
-//     &::after {
-//       opacity: 1;
-//       transform: scaleX(1);
-//     }
-//   }
-// }
-
-// .nav-table__link::after {
-//   content: '';
-//   display: block;
-//   height: 4px;
-//   width: 100%;
-//   background: #2196f3;
-//   border-radius: 2px;
-//   position: absolute;
-//   bottom: -1.5px;
-//   opacity: 0;
-//   transition-property: transform background opacity;
-//   transition-duration: 250ms;
-//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-//   transform: scaleX(0);
-// }
-
-// .nav-table__link--activ::after {
-//   content: '';
-//   display: block;
-//   height: 4px;
-//   width: 100%;
-//   background: #2196f3;
-//   border-radius: 2px;
-//   position: absolute;
-//   bottom: -1.5px;
-//   transform: scale(1);
-//   opacity: 1;
-// }
-// .contacts {
-//   display: flex;
-//   margin-left: auto;
-// }
-
-// .contacts__item:first-child {
-//   margin-right: 50px;
-// }
-
-// .contacts__link {
-//   display: flex;
-//   align-items: center;
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 16px;
-//   letter-spacing: 0.02em;
-//   color: var(--link-color);
-//   fill: var(--link-color);
-//   text-decoration: none;
-//   padding: 32px 0;
-//   transition-property: color, fill;
-//   transition-duration: 250ms;
-//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-//   &:hover,
-//   &:focus {
-//     color: var(--accent-color);
-//     fill: var(--accent-color);
-//   }
-// }
-
-// .contacts__icon {
-//   margin-right: 10px;
-// }
-// }

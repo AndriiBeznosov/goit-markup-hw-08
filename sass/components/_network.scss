@@ -1,6 +1,9 @@
 .network {
-  margin-top: 60px;
+
+  @include mobile-max {
+     margin-top: 60px;
   margin-bottom: 60px;
+  }
 
   display: block;
   text-align: center;

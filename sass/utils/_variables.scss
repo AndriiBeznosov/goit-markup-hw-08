@@ -23,11 +23,12 @@ body {
 }
 
 
-@media screen and (max-width:767px) {
-  .menu-open {
+
+  .menu-open,
+  .modal-open {
     overflow: hidden;
   }
-}
+
 
 
 img {
@@ -55,8 +56,11 @@ li {
   margin: 0;
   padding: 0;
 }
+
 header {
+@media screen and (min-width:768px) {
   border-bottom: 1px solid var(--hero-border-color);
+}
 }
 
 header .activ {

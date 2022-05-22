@@ -1,4 +1,3 @@
-
 .logo {
   font-family: $logo-font;
   font-weight: 700;
@@ -6,16 +5,28 @@
   line-height: 1.192;
   letter-spacing: 0.03em;
   text-decoration: none;
+  display: block;
 }
 
 .logo-header {
   color: var(--logo-color);
-  padding-top: 16px;
-  padding-bottom: 16px;
+
+  @include mobile-max {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  @include tablet {
+    padding-top: 24px;
+    margin-right: 88px;
+    padding-bottom: 25px;
+  }
+  @include desktop {
+    margin-right: 93px;
+  }
 
   &__color {
-  color: var(--accent-color);
-}
+    color: var(--accent-color);
+  }
 }
 
 .logo-footer {

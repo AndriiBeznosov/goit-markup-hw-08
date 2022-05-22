@@ -1,8 +1,8 @@
 .backdrop-form {
-  // position: relative;
   padding: 40px;
-  @media screen and (max-width:402px) {
-    padding:30px 20px;
+
+  @media screen and (max-width: 420px) {
+    padding: 40px 20px;
   }
 }
 .backdrop-form__title {
@@ -113,7 +113,7 @@
   letter-spacing: 0.03em;
   color: #757575;
 
-   @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.714;
   }

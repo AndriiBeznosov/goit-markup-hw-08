@@ -31,9 +31,13 @@
 
 .logo-footer {
   color: var(--primary-whity-color);
-  display: flex;
-  justify-content: center;
   margin-bottom: 20px;
+  
+
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 .logo-footer__color {
   color: var(--accent-color);

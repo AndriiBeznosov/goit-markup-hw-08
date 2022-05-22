@@ -15,7 +15,7 @@
     border: 0;
     padding: 10px 0;
     margin-left: auto;
-    z-index: 3;
+    z-index: 10;
 
     &:hover {
       fill: var(--accent-color);
@@ -24,6 +24,9 @@
       fill: var(--accent-color);
     }
   }
+}
+.header__border {
+  border-bottom: 1px solid var(--hero-border-color);
 }
 
 @include tablet {
@@ -64,7 +67,13 @@
   }
   @include tablet {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+
   }
+}
+body.menu-open .tehno__fon--card {
+  position: static;
 }
 
 .nav-table {
@@ -163,7 +172,6 @@
   @include tablet {
     display: inline-flex;
     align-items: center;
-    margin-left: 63px;
   }
 }
 

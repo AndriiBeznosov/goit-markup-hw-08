@@ -45,10 +45,12 @@
         <nav class="nav" data-menu id="nav">
           <ul class="nav-table">
             <li class="nav-table__item">
-              <a class="nav-table__link " href="./index.html"> Студия </a>
+              <a class="nav-table__link" href="./index.html"> Студия </a>
             </li>
             <li class="nav-table__item">
-              <a class="nav-table__link nav-table__link--activ" href="./portfolio.html">Портфолио</a>
+              <a class="nav-table__link nav-table__link--activ" href="./portfolio.html"
+                >Портфолио</a
+              >
             </li>
             <li class="nav-table__item">
               <a class="nav-table__link" href="">Контакты</a>
@@ -77,9 +79,15 @@
             </ul>
             <ul class="soc">
               <li class="soc__item"><a class="soc__link" href="">Instagram</a></li>
-              <li class="soc__item"><a class="soc__link" href=""> <span class="soc__span"></span> Twitter</a></li>
-              <li class="soc__item"><a class="soc__link" href=""> <span class="soc__span"></span> Facebook</a></li>
-              <li class="soc__item"><a class="soc__link" href=""> <span class="soc__span"></span> LinkedIn</a></li>
+              <li class="soc__item">
+                <a class="soc__link" href=""> <span class="soc__span"></span> Twitter</a>
+              </li>
+              <li class="soc__item">
+                <a class="soc__link" href=""> <span class="soc__span"></span> Facebook</a>
+              </li>
+              <li class="soc__item">
+                <a class="soc__link" href=""> <span class="soc__span"></span> LinkedIn</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -113,7 +121,44 @@
             <li class="tehno__item">
               <a class="tehno__link" href="">
                 <div class="tehno__fon--card">
-                  <img src="./images/img-group1.jpg" alt="photo" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-group1.webp    1x,
+                        ./images/desktop/desktop-group1-x2.webp 2x,
+                        ./images/desktop/desktop-group1.jpg     1x,
+                        ./images/desktop/desktop-group1-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="370"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-group1.webp    1x,
+                        ./images/tablet/tablet-group1-x2.webp 2x,
+                        ./images/tablet/tablet-group1.jpg     1x,
+                        ./images/tablet/tablet-group1-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="354"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-group1.webp    1x,
+                        ./images/mobile/mobile-group1-x2.webp 2x,
+                        ./images/mobile/mobile-group1.jpg     1x,
+                        ./images/mobile/mobile-group1-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="450"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/desktop/desktop-group1.jpg" alt="photo" />
+                  </picture>
+
                   <p class="tehno__fon--text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -130,7 +175,44 @@
             <li class="tehno__item">
               <a class="tehno__link" href="">
                 <div class="tehno__fon--card">
-                  <img src="./images/img-group2.jpg" alt="photo" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-group2.webp    1x,
+                        ./images/desktop/desktop-group2-x2.webp 2x,
+                        ./images/desktop/desktop-group2.jpg     1x,
+                        ./images/desktop/desktop-group2-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="370"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-group2.webp    1x,
+                        ./images/tablet/tablet-group2-x2.webp 2x,
+                        ./images/tablet/tablet-group2.jpg     1x,
+                        ./images/tablet/tablet-group2-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="354"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-group2.webp    1x,
+                        ./images/mobile/mobile-group2-x2.webp 2x,
+                        ./images/mobile/mobile-group2.jpg     1x,
+                        ./images/mobile/mobile-group2-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="450"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/tablet/tablet-group2.jpg" alt="photo"  />
+                  </picture>
+
                   <p class="tehno__fon--text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -146,7 +228,43 @@
             <li class="tehno__item">
               <a class="tehno__link" href="">
                 <div class="tehno__fon--card">
-                  <img src="./images/img-group3.jpg" alt="photo" width="370" />
+                   <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-group3.webp    1x,
+                        ./images/desktop/desktop-group3-x2.webp 2x,
+                        ./images/desktop/desktop-group3.jpg     1x,
+                        ./images/desktop/desktop-group3-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="370"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-group3.webp    1x,
+                        ./images/tablet/tablet-group3-x2.webp 2x,
+                        ./images/tablet/tablet-group3.jpg     1x,
+                        ./images/tablet/tablet-group3-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="354"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-group3.webp    1x,
+                        ./images/mobile/mobile-group3-x2.webp 2x,
+                        ./images/mobile/mobile-group3.jpg     1x,
+                        ./images/mobile/mobile-group3-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="450"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/tablet/tablet-group3.jpg" alt="photo" />
+                  </picture>
                   <p class="tehno__fon--text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -162,7 +280,43 @@
             <li class="tehno__item">
               <a class="tehno__link" href="">
                 <div class="tehno__fon--card">
-                  <img src="./images/img-group4.jpg" alt="photo" width="370" />
+                   <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-group4.webp    1x,
+                        ./images/desktop/desktop-group4-x2.webp 2x,
+                        ./images/desktop/desktop-group4.jpg     1x,
+                        ./images/desktop/desktop-group4-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="370"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-group4.webp    1x,
+                        ./images/tablet/tablet-group4-x2.webp 2x,
+                        ./images/tablet/tablet-group4.jpg     1x,
+                        ./images/tablet/tablet-group4-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="354"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-group4.webp    1x,
+                        ./images/mobile/mobile-group4-x2.webp 2x,
+                        ./images/mobile/mobile-group4.jpg     1x,
+                        ./images/mobile/mobile-group4-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="450"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/tablet/tablet-group4.jpg" alt="photo" />
+                  </picture>
                   <p class="tehno__fon--text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -178,7 +332,43 @@
             <li class="tehno__item">
               <a class="tehno__link" href="">
                 <div class="tehno__fon--card">
-                  <img src="./images/img-group5.jpg" alt="photo" width="370" />
+                   <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-group5.webp    1x,
+                        ./images/desktop/desktop-group5-x2.webp 2x,
+                        ./images/desktop/desktop-group5.jpg     1x,
+                        ./images/desktop/desktop-group5-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="370"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-group5.webp    1x,
+                        ./images/tablet/tablet-group5-x2.webp 2x,
+                        ./images/tablet/tablet-group5.jpg     1x,
+                        ./images/tablet/tablet-group5-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="354"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-group5.webp    1x,
+                        ./images/mobile/mobile-group5-x2.webp 2x,
+                        ./images/mobile/mobile-group5.jpg     1x,
+                        ./images/mobile/mobile-group5-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="450"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/tablet/tablet-group5.jpg" alt="photo"  />
+                  </picture>
                   <p class="tehno__fon--text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -194,7 +384,43 @@
             <li class="tehno__item">
               <a class="tehno__link" href="">
                 <div class="tehno__fon--card">
-                  <img src="./images/img-group6.jpg" alt="photo" width="370" />
+                   <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-group6.webp    1x,
+                        ./images/desktop/desktop-group6-x2.webp 2x,
+                        ./images/desktop/desktop-group6.jpg     1x,
+                        ./images/desktop/desktop-group6-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="370"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-group6.webp    1x,
+                        ./images/tablet/tablet-group6-x2.webp 2x,
+                        ./images/tablet/tablet-group6.jpg     1x,
+                        ./images/tablet/tablet-group6-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="354"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-group6.webp    1x,
+                        ./images/mobile/mobile-group6-x2.webp 2x,
+                        ./images/mobile/mobile-group6.jpg     1x,
+                        ./images/mobile/mobile-group6-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="450"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/tablet/tablet-group6.jpg" alt="photo"  />
+                  </picture>
                   <p class="tehno__fon--text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -210,7 +436,43 @@
             <li class="tehno__item">
               <a class="tehno__link" href="">
                 <div class="tehno__fon--card">
-                  <img src="./images/img-group7.jpg" alt="photo" width="370" />
+                   <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-group7.webp    1x,
+                        ./images/desktop/desktop-group7-x2.webp 2x,
+                        ./images/desktop/desktop-group7.jpg     1x,
+                        ./images/desktop/desktop-group7-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="370"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-group7.webp    1x,
+                        ./images/tablet/tablet-group7-x2.webp 2x,
+                        ./images/tablet/tablet-group7.jpg     1x,
+                        ./images/tablet/tablet-group7-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="354"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-group7.webp    1x,
+                        ./images/mobile/mobile-group7-x2.webp 2x,
+                        ./images/mobile/mobile-group7.jpg     1x,
+                        ./images/mobile/mobile-group7-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="450"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/tablet/tablet-group7.jpg" alt="photo" />
+                  </picture>
                   <p class="tehno__fon--text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -226,7 +488,43 @@
             <li class="tehno__item">
               <a class="tehno__link" href="">
                 <div class="tehno__fon--card">
-                  <img src="./images/img-group8.jpg" alt="photo" width="370" />
+                   <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-group8.webp    1x,
+                        ./images/desktop/desktop-group8-x2.webp 2x,
+                        ./images/desktop/desktop-group8.jpg     1x,
+                        ./images/desktop/desktop-group8-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="370"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-group8.webp    1x,
+                        ./images/tablet/tablet-group8-x2.webp 2x,
+                        ./images/tablet/tablet-group8.jpg     1x,
+                        ./images/tablet/tablet-group8-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="354"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-group8.webp    1x,
+                        ./images/mobile/mobile-group8-x2.webp 2x,
+                        ./images/mobile/mobile-group8.jpg     1x,
+                        ./images/mobile/mobile-group8-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="450"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/tablet/tablet-group8.jpg" alt="photo" />
+                  </picture>
                   <p class="tehno__fon--text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -242,7 +540,43 @@
             <li class="tehno__item">
               <a class="tehno__link" href="">
                 <div class="tehno__fon--card">
-                  <img src="./images/img-group9.jpg" alt="photo" width="370" />
+                   <picture>
+                    <source
+                      srcset="
+                        ./images/desktop/desktop-group9.webp    1x,
+                        ./images/desktop/desktop-group9-x2.webp 2x,
+                        ./images/desktop/desktop-group9.jpg     1x,
+                        ./images/desktop/desktop-group9-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="370"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/tablet-group9.webp    1x,
+                        ./images/tablet/tablet-group9-x2.webp 2x,
+                        ./images/tablet/tablet-group9.jpg     1x,
+                        ./images/tablet/tablet-group9-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="354"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/mobile-group9.webp    1x,
+                        ./images/mobile/mobile-group9-x2.webp 2x,
+                        ./images/mobile/mobile-group9.jpg     1x,
+                        ./images/mobile/mobile-group9-x2.jpg  2x
+                      "
+                      type="image/webp"
+                      sizes="450"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/tablet/tablet-group9.jpg" alt="photo" />
+                  </picture>
                   <p class="tehno__fon--text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании

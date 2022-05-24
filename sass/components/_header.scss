@@ -40,6 +40,7 @@
 }
 .header-btm.is-open .header-btm__icon-close {
   display: block;
+  z-index: 9;
 }
 .header-btm.is-open .header-btm__icon-menu {
   display: none;
@@ -69,7 +70,6 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-
   }
 }
 body.menu-open .tehno__fon--card {
@@ -78,7 +78,6 @@ body.menu-open .tehno__fon--card {
 
 .nav-table {
   display: flex;
-  
 
   @include mobile-max {
     flex-direction: column;
@@ -94,7 +93,7 @@ body.menu-open .tehno__fon--card {
   @include tablet {
     margin-right: 50px;
     &:last-child {
-      margin-right:0;
+      margin-right: 0;
     }
   }
 }
@@ -119,32 +118,30 @@ body.menu-open .tehno__fon--card {
     position: relative;
   }
 
+  &::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: var(--accent-color);
+    border-radius: 2px;
+    position: absolute;
+    bottom: -1.5px;
+    opacity: 0;
+    transition-property: transform background opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scaleX(0);
+  }
+
   &:hover,
   &:focus {
     color: var(--accent-color);
     fill: var(--accent-color);
 
-    @include tablet {
-      &::after {
-        content: '';
-        display: block;
-        height: 4px;
-        width: 100%;
-        background: var(--accent-color);
-        border-radius: 2px;
-        position: absolute;
-        bottom: -1.5px;
-        opacity: 0;
-        transition-property: transform background opacity;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transform: scaleX(0);
-      }
-
-      &::after {
-        opacity: 1;
-        transform: scaleX(1);
-      }
+    &::after {
+      opacity: 1;
+      transform: scaleX(1);
     }
   }
 }
@@ -182,20 +179,18 @@ body.menu-open .tehno__fon--card {
     flex-direction: column-reverse;
   }
 
-   @media screen and (min-width:768px) and (max-width:1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     &__item:last-child {
       margin-bottom: 10px;
     }
   }
 }
 
-
 @include desktop {
   .contacts__item:first-child {
     margin-right: 50px;
   }
 }
-
 
 .contacts__link {
   display: flex;
@@ -284,5 +279,3 @@ body.menu-open .tehno__fon--card {
   transform: rotate(90deg);
   transform-origin: top left;
 }
-
-

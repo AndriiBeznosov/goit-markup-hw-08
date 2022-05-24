@@ -163,15 +163,50 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="work">
             <li class="work__img">
-              <img src="./images/box1.jpg" alt="photo" width="370" />
+              <img
+                srcset="
+                  ./images/desktop/box1.webp    1x,
+                  ./images/desktop/box1-x2.webp 2x,
+                  ./images/desktop/box1.jpg     1x,
+                  ./images/desktop/box1-x2.jpg  2x
+                "
+                media="(min-width: 1200px)"
+                type="image/webp"
+                src="./images/desktop/box1.jpg"
+                alt="photo"
+              />
+
               <p class="work__text">Десктопные приложения</p>
             </li>
             <li class="work__img">
-              <img src="./images/box2.jpg" alt="photo" width="370" />
+              <img
+                srcset="
+                  ./images/desktop/box2.webp    1x,
+                  ./images/desktop/box2-x2.webp 2x,
+                  ./images/desktop/box2.jpg     1x,
+                  ./images/desktop/box2-x2.jpg  2x
+                "
+                media="(min-width: 1200px)"
+                type="image/webp"
+                src="./images/desktop/box2.jpg"
+                alt="photo"
+              />
               <p class="work__text">Мобильные приложения</p>
             </li>
             <li class="work__img">
-              <img src="./images/box3.jpg" alt="photo" width="370" />
+              <img
+                srcset="
+                  ./images/desktop/box3.webp    1x,
+                  ./images/desktop/box3-x2.webp 2x,
+                  ./images/desktop/box3.jpg     1x,
+                  ./images/desktop/box3-x2.jpg  2x
+                "
+                type="image/webp"
+                src="./images/desktop/box3.jpg"
+                alt="photo"
+                width="370"
+              />
+
               <p class="work__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -183,7 +218,44 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="trainer">
             <li class="trainer__item">
-              <img src="./images/team1-mobile.jpeg" alt="photo" width="450" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/desktop-team1.webp    1x,
+                    ./images/desktop/desktop-team1-x2.webp 2x,
+                    ./images/desktop/desktop-team1.jpg     1x,
+                    ./images/desktop/desktop-team1-x2.jpg  2x
+                  "
+                  type="image/webp"
+                  sizes="270"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/tablet-team1.webp    1x,
+                    ./images/tablet/tablet-team1-x2.webp 2x,
+                    ./images/tablet/tablet-team1.jpg     1x,
+                    ./images/tablet/tablet-team1-x2.jpg  2x
+                  "
+                  type="image/webp"
+                  sizes="354"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/mobile-team1.webp    1x,
+                    ./images/mobile/mobile-team1-x2.webp 2x,
+                    ./images/mobile/mobile-team1.jpg     1x,
+                    ./images/mobile/mobile-team1-x2.jpg  2x
+                  "
+                  type="image/webp"
+                  sizes="450"
+                  media="(min-width:480px)"
+                />
+
+                <img src="./images/desktop/desktop-team1.jpg" alt="photo" />
+              </picture>
+
               <div class="trainer__tehno-card">
                 <h3 class="trainer__title">Игорь Демьяненко</h3>
                 <p class="trainer__text">Product Designer</p>
@@ -220,7 +292,43 @@
               </div>
             </li>
             <li class="trainer__item">
-              <img src="./images/team2-mobile.jpeg" alt="photo" width="450" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/desktop-team2.webp    1x,
+                    ./images/desktop/desktop-team2-x2.webp 2x,
+                    ./images/desktop/desktop-team2.jpg     1x,
+                    ./images/desktop/desktop-team2-x2.jpg  2x
+                  "
+                  type="image/webp"
+                  sizes="270"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/tablet-team2.webp    1x,
+                    ./images/tablet/tablet-team2-x2.webp 2x,
+                    ./images/tablet/tablet-team2.jpg     1x,
+                    ./images/tablet/tablet-team2-x2.jpg  2x
+                  "
+                  type="image/webp"
+                  sizes="354"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/mobile-team2.webp    1x,
+                    ./images/mobile/mobile-team2-x2.webp 2x,
+                    ./images/mobile/mobile-team2.jpg     1x,
+                    ./images/mobile/mobile-team2-x2.jpg  2x
+                  "
+                  type="image/webp"
+                  sizes="450"
+                  media="(min-width:480px)"
+                />
+
+                <img src="./images/desktop/desktop-team2.jpg" alt="photo" />
+              </picture>
               <div class="trainer__tehno-card">
                 <h3 class="trainer__title">Ольга Репина</h3>
                 <p class="trainer__text">Frontend Developer</p>
@@ -257,7 +365,43 @@
               </div>
             </li>
             <li class="trainer__item">
-              <img src="./images/team3-mobile.jpeg" alt="photo" width="450" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/desktop-team3.webp    1x,
+                    ./images/desktop/desktop-team1-x2.webp 2x,
+                    ./images/desktop/desktop-team3.jpg     1x,
+                    ./images/desktop/desktop-team3-x2.jpg  2x
+                  "
+                  type="image/webp"
+                  sizes="270"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/tablet-team3.webp    1x,
+                    ./images/tablet/tablet-team3-x2.webp 2x,
+                    ./images/tablet/tablet-team3.jpg     1x,
+                    ./images/tablet/tablet-team3-x2.jpg  2x
+                  "
+                  type="image/webp"
+                  sizes="354"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/mobile-team3.webp    1x,
+                    ./images/mobile/mobile-team3-x2.webp 2x,
+                    ./images/mobile/mobile-team3.jpg     1x,
+                    ./images/mobile/mobile-team3-x2.jpg  2x
+                  "
+                  type="image/webp"
+                  sizes="450"
+                  media="(min-width:480px)"
+                />
+
+                <img src="./images/desktop/desktop-team3.jpg" alt="photo" />
+              </picture>
               <div class="trainer__tehno-card">
                 <h3 class="trainer__title">Николай Тарасов</h3>
                 <p class="trainer__text">Marketing</p>
@@ -294,7 +438,43 @@
               </div>
             </li>
             <li class="trainer__item">
-              <img src="./images/team4-mobile.jpeg" alt="photo" width="450" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/desktop-team4.webp    1x,
+                    ./images/desktop/desktop-team4-x2.webp 2x,
+                    ./images/desktop/desktop-team4.jpg     1x,
+                    ./images/desktop/desktop-team4-x2.jpg  2x
+                  "
+                  type="image/webp"
+                  sizes="270"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/tablet-team4.webp    1x,
+                    ./images/tablet/tablet-team4-x2.webp 2x,
+                    ./images/tablet/tablet-team4.jpg     1x,
+                    ./images/tablet/tablet-team4-x2.jpg  2x
+                  "
+                  type="image/webp"
+                  sizes="354"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/mobile-team4.webp    1x,
+                    ./images/mobile/mobile-team4-x2.webp 2x,
+                    ./images/mobile/mobile-team4.jpg     1x,
+                    ./images/mobile/mobile-team4-x2.jpg  2x
+                  "
+                  type="image/webp"
+                  sizes="450"
+                  media="(min-width:480px)"
+                />
+
+                <img src="./images/desktop/desktop-team4.jpg" alt="photo" />
+              </picture>
               <div class="trainer__tehno-card">
                 <h3 class="trainer__title">Михаил Ермаков</h3>
                 <p class="trainer__text">UI Designer</p>

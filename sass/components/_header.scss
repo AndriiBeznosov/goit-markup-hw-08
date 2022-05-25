@@ -46,6 +46,7 @@
   display: none;
 }
 
+
 .nav {
   @include mobile-max {
     position: fixed;
@@ -73,7 +74,7 @@
   }
 }
 body.menu-open .tehno__fon--card {
-  position: static; 
+  position: static;
 }
 
 .nav-table {
@@ -166,6 +167,10 @@ body.menu-open .tehno__fon--card {
 }
 
 .container-box {
+  @include mobile-max {
+    margin-top: 30px;
+  }
+ 
   @include tablet {
     display: inline-flex;
     align-items: center;

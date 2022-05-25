@@ -50,7 +50,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
@@ -63,6 +64,21 @@
   transform: translateY(100%);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (max-width:767px) {
+    body.menu-open & {
+      display: none;
+    }
+  }
+@media screen and (max-width:320px) {
+    font-size: 12px;
+    padding: 33px 10px;
+    
+  }
+  @media screen and (min-width:321px) and (max-width:370px) {
+    font-size: 16px;
+    padding: 33px 10px;
+    
+  }
 }
 .tehno__link:hover,
 .tehno__link:focus {

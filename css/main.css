@@ -1184,6 +1184,12 @@ body.menu-open .tehno__fon--card {
   opacity: 1;
   transform: translateY(0);
 }
+body.menu-open .tehno__link:hover .tehno__fon--text,
+body.menu-open .tehno__link:hover .tehno__fon--text,
+body.menu-open .tehno__link:focus .tehno__fon--text,
+body.menu-open .tehno__link:focus .tehno__fon--text {
+  opacity: 0;
+}
 
 .tehno__card {
   padding: 20px 24px;

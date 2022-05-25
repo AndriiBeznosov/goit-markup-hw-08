@@ -1,7 +1,6 @@
 .tehno {
   display: flex;
   flex-wrap: wrap;
- 
 
   @include tablet {
     margin: -15px;
@@ -9,7 +8,7 @@
 }
 .tehno__item {
   max-width: 100%;
-  
+
   @include mobile-max {
     margin-bottom: 30px;
   }
@@ -18,7 +17,7 @@
     max-width: 354px;
     flex-basis: calc(100% / 2 - 30px);
     margin: 15px;
-     align-items: stretch;
+    align-items: stretch;
   }
 
   @include desktop {
@@ -46,6 +45,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .tehno__fon--text {
   position: absolute;
   top: 0;
@@ -70,7 +70,12 @@
   .tehno__fon--text {
     opacity: 1;
     transform: translateY(0);
+    body.menu-open & {
+      opacity: 0;
+     
+    }
   }
+
 }
 .tehno__card {
   padding: 20px 24px;
@@ -78,6 +83,7 @@
   border-bottom: 1px solid var(--hero-border-color);
   border-left: 1px solid var(--hero-border-color);
 }
+
 .tehno__title {
   margin: 0;
   padding: 0;

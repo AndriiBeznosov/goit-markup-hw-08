@@ -28,7 +28,9 @@
 }
 
 .tehno__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   transition-property: box-shadow;
   transition-duration: 250ms;
@@ -64,20 +66,18 @@
   transform: translateY(100%);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     body.menu-open & {
       display: none;
     }
   }
-@media screen and (max-width:320px) {
+  @media screen and (max-width: 320px) {
     font-size: 12px;
     padding: 33px 10px;
-    
   }
-  @media screen and (min-width:321px) and (max-width:370px) {
+  @media screen and (min-width: 321px) and (max-width: 370px) {
     font-size: 16px;
     padding: 33px 10px;
-    
   }
 }
 .tehno__link:hover,
@@ -88,16 +88,18 @@
     transform: translateY(0);
     body.menu-open & {
       opacity: 0;
-     
     }
   }
-
 }
 .tehno__card {
   padding: 20px 24px;
   border-right: 1px solid var(--hero-border-color);
   border-bottom: 1px solid var(--hero-border-color);
   border-left: 1px solid var(--hero-border-color);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+ flex-grow: 1;
 }
 
 .tehno__title {

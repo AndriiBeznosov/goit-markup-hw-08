@@ -1157,7 +1157,9 @@ body.menu-open .tehno__fon--card {
 }
 
 .tehno__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   transition-property: box-shadow;
   transition-duration: 250ms;
@@ -1228,6 +1230,10 @@ body.menu-open .tehno__link:focus .tehno__fon--text {
   border-right: 1px solid var(--hero-border-color);
   border-bottom: 1px solid var(--hero-border-color);
   border-left: 1px solid var(--hero-border-color);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  flex-grow: 1;
 }
 
 .tehno__title {

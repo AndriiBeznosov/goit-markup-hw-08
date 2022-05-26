@@ -10,7 +10,7 @@
   .header-btm {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 6px;
     background-color: transparent;
     border: 0;
     padding: 10px 0;
@@ -46,7 +46,6 @@
   display: none;
 }
 
-
 .nav {
   @include mobile-max {
     position: fixed;
@@ -67,6 +66,7 @@
       margin-right: auto;
     }
   }
+
   @include tablet {
     display: flex;
     justify-content: space-between;
@@ -170,7 +170,7 @@ body.menu-open .tehno__fon--card {
   @include mobile-max {
     margin-top: 30px;
   }
- 
+
   @include tablet {
     display: inline-flex;
     align-items: center;
@@ -179,13 +179,14 @@ body.menu-open .tehno__fon--card {
 
 .contacts {
   display: flex;
-
-  @include tablet-max {
+  @include mobile-max {
     flex-direction: column-reverse;
   }
+ 
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    &__item:last-child {
+    flex-direction: column;
+    &__item:first-child {
       margin-bottom: 10px;
     }
   }

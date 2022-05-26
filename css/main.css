@@ -337,7 +337,7 @@ input {
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .container {
     max-width: 480px;
   }
@@ -367,6 +367,11 @@ input {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 1199px) {
+  .section__no-padding-top {
+    display: none;
+  }
+}
 @media screen and (min-width: 1200px) {
   .section {
     padding-top: 94px;
@@ -378,6 +383,10 @@ input {
     margin-bottom: 50px;
   }
 }
+.section__no-padding-top {
+  padding-top: 0;
+}
+
 .logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -441,7 +450,7 @@ input {
   .header-btm {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 6px;
     background-color: transparent;
     border: 0;
     padding: 10px 0;
@@ -610,13 +619,16 @@ body.menu-open .tehno__fon--card {
 .contacts {
   display: flex;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .contacts {
     flex-direction: column-reverse;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .contacts__item:last-child {
+  .contacts {
+    flex-direction: column;
+  }
+  .contacts__item:first-child {
     margin-bottom: 10px;
   }
 }
@@ -714,15 +726,15 @@ body.menu-open .tehno__fon--card {
 
 .hero {
   background-color: #c4c4c4;
-  max-width: 480px;
-  height: 400px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  padding: 118px 0;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/mobile-fon.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 480px 400px;
+  background-size: cover;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
@@ -731,9 +743,7 @@ body.menu-open .tehno__fon--card {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/tablet-fon.jpg);
-    background-size: 768px 400px;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
@@ -743,10 +753,8 @@ body.menu-open .tehno__fon--card {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    max-width: 1600px;
-    height: 600px;
+    padding: 200px 0;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/desktop-fon.jpg);
-    background-size: 1600px 600px;
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
@@ -762,7 +770,6 @@ body.menu-open .tehno__fon--card {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-whity-color);
-  padding-top: 118px;
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -945,10 +952,7 @@ body.menu-open .tehno__fon--card {
 .trainer__tehno-card {
   padding-top: 30px;
   padding-bottom: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .trainer__title {
@@ -969,6 +973,7 @@ body.menu-open .tehno__fon--card {
 
 .social {
   display: flex;
+  justify-content: center;
   margin-top: 16px;
 }
 
@@ -1066,16 +1071,12 @@ body.menu-open .tehno__fon--card {
 .filter__table {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-@media screen and (max-width: 767px) {
-  .filter__table {
-    margin-left: -8px;
-  }
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .filter__table {
     justify-content: center;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1085,12 +1086,18 @@ body.menu-open .tehno__fon--card {
 }
 
 .filter__item {
-  margin-left: 8px;
+  margin-right: 8px;
   margin-bottom: 15px;
 }
+.filter__item:last-child {
+  margin-right: 0;
+}
+.filter__item:nth-child(n+4) {
+  margin-bottom: 0;
+}
 @media screen and (min-width: 768px) {
-  .filter__item:first-child {
-    margin-left: 0;
+  .filter__item {
+    margin-bottom: 0;
   }
 }
 
@@ -1138,6 +1145,9 @@ body.menu-open .tehno__fon--card {
 @media screen and (max-width: 767px) {
   .tehno__item {
     margin-bottom: 30px;
+  }
+  .tehno__item:last-child {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1230,9 +1240,6 @@ body.menu-open .tehno__link:focus .tehno__fon--text {
   border-right: 1px solid var(--hero-border-color);
   border-bottom: 1px solid var(--hero-border-color);
   border-left: 1px solid var(--hero-border-color);
-  display: flex;
-  flex-direction: column;
-  height: auto;
   flex-grow: 1;
 }
 
@@ -1258,9 +1265,6 @@ body.menu-open .tehno__link:focus .tehno__fon--text {
   background-color: var(--bgr-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .footer__container {
@@ -1283,6 +1287,9 @@ body.menu-open .tehno__link:focus .tehno__fon--text {
 @media screen and (min-width: 1200px) {
   .footer__container {
     align-items: baseline;
+  }
+  .footer__container > div {
+    flex-grow: 1;
   }
 }
 
@@ -1445,6 +1452,7 @@ body.menu-open .tehno__link:focus .tehno__fon--text {
 @media screen and (min-width: 1200px) {
   .footer-form__email {
     width: 358px;
+    margin-right: 12px;
   }
 }
 
@@ -1487,6 +1495,12 @@ body.menu-open .tehno__link:focus .tehno__fon--text {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 4;
   overflow-y: scroll;
+}
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 @media screen and (max-width: 767px) {
   .backdrop {

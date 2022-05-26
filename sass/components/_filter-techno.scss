@@ -1,14 +1,15 @@
 .filter__table {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+   margin-bottom: 40px;
 
-  @include mobile-max {
-    margin-left: -8px;
-  }
+  // @include mobile-max {
+  //   margin-left: -8px;
+  // }
 
   @include tablet {
     justify-content: center;
+    margin-bottom: 30px;
   }
 
   @include desktop {
@@ -17,14 +18,20 @@
 }
 
 .filter__item {
-  margin-left: 8px;
+  margin-right: 8px;
   margin-bottom: 15px;
 
-  @include tablet {
-    &:first-child {
-      margin-left: 0;
+  
+    &:last-child {
+      margin-right: 0;
     }
+    &:nth-child(n+4){
+      margin-bottom: 0;
+    }
+      @include tablet {
+    margin-bottom: 0;
   }
+  
 }
 
 .filter-btm {

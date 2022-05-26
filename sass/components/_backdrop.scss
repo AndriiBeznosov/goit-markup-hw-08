@@ -10,7 +10,11 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 4;
   overflow-y: scroll;
-
+  
+@include mobile-max {
+  padding-left: 15px;
+  padding-right: 15px;
+}
   @media screen and(max-width:767px) {
     display: flex;
     justify-content: center;

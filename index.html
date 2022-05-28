@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
-    /> -->
+    />
     <link rel="stylesheet" href="./css/main.min.css" />
     <!-- <link rel="stylesheet" href="./css/style.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +20,7 @@
       rel="stylesheet"
     />
   </head>
-  <body menu-hidden>
+  <body>
     <header class="header">
       <div class="container header__container">
         <!-- logo -->
@@ -96,7 +96,6 @@
       <!-- Hero -->
       <section class="hero">
         <div class="container">
-          
           <h1 class="hero__title">
             Эффективные решения
             <br />
@@ -164,49 +163,52 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="work">
             <li class="work__img">
-              <img
-                srcset="
-                  ./images/desktop/box1.webp    1x,
-                  ./images/desktop/box1-x2.webp 2x,
-                  ./images/desktop/box1.jpg     1x,
-                  ./images/desktop/box1-x2.jpg  2x
-                "
-                media="(min-width: 1200px)"
-                type="image/webp"
-                src="./images/desktop/box1.jpg"
-                alt="photo"
-              />
+              <picture>
+                <source
+                  srcset="./images/desktop/box1.webp 1x, ./images/desktop/box1-x2.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="./images/desktop/box1.jpg 1x, ./images/desktop/box1-x2.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <img src="./images/desktop/box1.jpg" alt="На фото изображено программирование" width="370"/>
+              </picture>
 
               <p class="work__text">Десктопные приложения</p>
             </li>
             <li class="work__img">
-              <img
-                srcset="
-                  ./images/desktop/box2.webp    1x,
-                  ./images/desktop/box2-x2.webp 2x,
-                  ./images/desktop/box2.jpg     1x,
-                  ./images/desktop/box2-x2.jpg  2x
-                "
-                media="(min-width: 1200px)"
-                type="image/webp"
-                src="./images/desktop/box2.jpg"
-                alt="photo"
-              />
+              <picture>
+                <source
+                  srcset="./images/desktop/box2.webp 1x, ./images/desktop/box2-x2.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/desktop/box2.jpg 1x, ./images/desktop/box2-x2.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <img src="./images/desktop/box2.jpg" alt="На фото изображено программирование" width="370"/>
+              </picture>
               <p class="work__text">Мобильные приложения</p>
             </li>
             <li class="work__img">
-              <img
-                srcset="
-                  ./images/desktop/box3.webp    1x,
-                  ./images/desktop/box3-x2.webp 2x,
-                  ./images/desktop/box3.jpg     1x,
-                  ./images/desktop/box3-x2.jpg  2x
-                "
-                type="image/webp"
-                src="./images/desktop/box3.jpg"
-                alt="photo"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/desktop/box3.webp 1x, ./images/desktop/box3-x2.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/desktop/box3.jpg 1x, ./images/desktop/box3-x2.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <img src="./images/desktop/box3.jpg" alt="На фото изображено программирование" width="370"/>
+              </picture>
 
               <p class="work__text">Дизайнерские решения</p>
             </li>
@@ -223,38 +225,60 @@
                 <source
                   srcset="
                     ./images/desktop/desktop-team1.webp    1x,
-                    ./images/desktop/desktop-team1-x2.webp 2x,
-                    ./images/desktop/desktop-team1.jpg     1x,
-                    ./images/desktop/desktop-team1-x2.jpg  2x
+                    ./images/desktop/desktop-team1-x2.webp 2x
                   "
                   type="image/webp"
-                  sizes="270"
                   media="(min-width:1200px)"
+                  width="270"
                 />
                 <source
                   srcset="
-                    ./images/tablet/tablet-team1.webp    1x,
-                    ./images/tablet/tablet-team1-x2.webp 2x,
-                    ./images/tablet/tablet-team1.jpg     1x,
-                    ./images/tablet/tablet-team1-x2.jpg  2x
+                    ./images/desktop/desktop-team1.jpg    1x,
+                    ./images/desktop/desktop-team1-x2.jpg 2x
                   "
-                  type="image/webp"
-                  sizes="354"
+                  media="(min-width:1200px)"
+                  type="image/jpg"
+                  width="270"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/tablet-team1.webp    1x,
+                    ./images/tablet/tablet-team1-x2.webp 2x
+                  "
                   media="(min-width:768px)"
+                  type="image/webp"
+                  width="354"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/tablet-team1.jpg    1x,
+                    ./images/tablet/tablet-team1-x2.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/jpg"
+                  width="354"
                 />
                 <source
                   srcset="
                     ./images/mobile/mobile-team1.webp    1x,
-                    ./images/mobile/mobile-team1-x2.webp 2x,
-                    ./images/mobile/mobile-team1.jpg     1x,
-                    ./images/mobile/mobile-team1-x2.jpg  2x
+                    ./images/mobile/mobile-team1-x2.webp 2x
                   "
-                  type="image/webp"
-                  sizes="450"
                   media="(max-width:767px)"
+                  type="image/webp"
+                  width="450"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/mobile-team1.jpg    1x,
+                    ./images/mobile/mobile-team1-x2.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/jpg"
+                  width="450"
                 />
 
-                <img src="./images/desktop/desktop-team1.jpg" alt="photo" />
+                <img src="./images/desktop/desktop-team1.jpg" alt="photo" width="270" />
               </picture>
 
               <div class="trainer__tehno-card">
@@ -297,38 +321,60 @@
                 <source
                   srcset="
                     ./images/desktop/desktop-team2.webp    1x,
-                    ./images/desktop/desktop-team2-x2.webp 2x,
-                    ./images/desktop/desktop-team2.jpg     1x,
-                    ./images/desktop/desktop-team2-x2.jpg  2x
+                    ./images/desktop/desktop-team2-x2.webp 2x
                   "
                   type="image/webp"
-                  sizes="270"
                   media="(min-width:1200px)"
+                  width="270"
                 />
                 <source
                   srcset="
-                    ./images/tablet/tablet-team2.webp    1x,
-                    ./images/tablet/tablet-team2-x2.webp 2x,
-                    ./images/tablet/tablet-team2.jpg     1x,
-                    ./images/tablet/tablet-team2-x2.jpg  2x
+                    ./images/desktop/desktop-team2.jpg    1x,
+                    ./images/desktop/desktop-team2-x2.jpg 2x
                   "
-                  type="image/webp"
-                  sizes="354"
+                  media="(min-width:1200px)"
+                  type="image/jpg"
+                  width="270"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/tablet-team2.webp    1x,
+                    ./images/tablet/tablet-team2-x2.webp 2x
+                  "
                   media="(min-width:768px)"
+                  type="image/webp"
+                  width="354"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/tablet-team2.jpg    1x,
+                    ./images/tablet/tablet-team2-x2.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/jpg"
+                  width="354"
                 />
                 <source
                   srcset="
                     ./images/mobile/mobile-team2.webp    1x,
-                    ./images/mobile/mobile-team2-x2.webp 2x,
-                    ./images/mobile/mobile-team2.jpg     1x,
-                    ./images/mobile/mobile-team2-x2.jpg  2x
+                    ./images/mobile/mobile-team2-x2.webp 2x
                   "
-                  type="image/webp"
-                  sizes="450"
                   media="(max-width:767px)"
+                  type="image/webp"
+                  width="450"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/mobile-team2.jpg    1x,
+                    ./images/mobile/mobile-team2-x2.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/jpg"
+                  width="450"
                 />
 
-                <img src="./images/desktop/desktop-team2.jpg" alt="photo" />
+                <img src="./images/desktop/desktop-team2.jpg" alt="photo" width="270"/>
               </picture>
               <div class="trainer__tehno-card">
                 <h3 class="trainer__title">Ольга Репина</h3>
@@ -370,38 +416,60 @@
                 <source
                   srcset="
                     ./images/desktop/desktop-team3.webp    1x,
-                    ./images/desktop/desktop-team1-x2.webp 2x,
-                    ./images/desktop/desktop-team3.jpg     1x,
-                    ./images/desktop/desktop-team3-x2.jpg  2x
+                    ./images/desktop/desktop-team3-x2.webp 2x
                   "
                   type="image/webp"
-                  sizes="270"
                   media="(min-width:1200px)"
+                  width="270"
                 />
                 <source
                   srcset="
-                    ./images/tablet/tablet-team3.webp    1x,
-                    ./images/tablet/tablet-team3-x2.webp 2x,
-                    ./images/tablet/tablet-team3.jpg     1x,
-                    ./images/tablet/tablet-team3-x2.jpg  2x
+                    ./images/desktop/desktop-team3.jpg    1x,
+                    ./images/desktop/desktop-team3-x2.jpg 2x
                   "
-                  type="image/webp"
-                  sizes="354"
+                  media="(min-width:1200px)"
+                  type="image/jpg"
+                  width="270"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/tablet-team3.webp    1x,
+                    ./images/tablet/tablet-team3-x2.webp 2x
+                  "
                   media="(min-width:768px)"
+                  type="image/webp"
+                  width="354"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/tablet-team3.jpg    1x,
+                    ./images/tablet/tablet-team3-x2.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/jpg"
+                  width="354"
                 />
                 <source
                   srcset="
                     ./images/mobile/mobile-team3.webp    1x,
-                    ./images/mobile/mobile-team3-x2.webp 2x,
-                    ./images/mobile/mobile-team3.jpg     1x,
-                    ./images/mobile/mobile-team3-x2.jpg  2x
+                    ./images/mobile/mobile-team3-x2.webp 2x
                   "
-                  type="image/webp"
-                  sizes="450"
                   media="(max-width:767px)"
+                  type="image/webp"
+                  width="450"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/mobile-team3.jpg    1x,
+                    ./images/mobile/mobile-team3-x2.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/jpg"
+                  width="450"
                 />
 
-                <img src="./images/desktop/desktop-team3.jpg" alt="photo" />
+                <img src="./images/desktop/desktop-team3.jpg" alt="photo" width="270"/>
               </picture>
               <div class="trainer__tehno-card">
                 <h3 class="trainer__title">Николай Тарасов</h3>
@@ -443,38 +511,61 @@
                 <source
                   srcset="
                     ./images/desktop/desktop-team4.webp    1x,
-                    ./images/desktop/desktop-team4-x2.webp 2x,
-                    ./images/desktop/desktop-team4.jpg     1x,
-                    ./images/desktop/desktop-team4-x2.jpg  2x
+                    ./images/desktop/desktop-team4-x2.webp 2x
                   "
                   type="image/webp"
-                  sizes="270"
                   media="(min-width:1200px)"
+                  width="270"
                 />
                 <source
                   srcset="
-                    ./images/tablet/tablet-team4.webp    1x,
-                    ./images/tablet/tablet-team4-x2.webp 2x,
-                    ./images/tablet/tablet-team4.jpg     1x,
-                    ./images/tablet/tablet-team4-x2.jpg  2x
+                    ./images/desktop/desktop-team4.jpg    1x,
+                    ./images/desktop/desktop-team4-x2.jpg 2x
                   "
-                  type="image/webp"
-                  sizes="354"
+                  media="(min-width:1200px)"
+                  type="image/jpg"
+                  width="270"
+                  
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/tablet-team4.webp    1x,
+                    ./images/tablet/tablet-team4-x2.webp 2x
+                  "
                   media="(min-width:768px)"
+                  type="image/webp"
+                  width="354"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/tablet-team4.jpg    1x,
+                    ./images/tablet/tablet-team4-x2.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/jpg"
+                  width="354"
                 />
                 <source
                   srcset="
                     ./images/mobile/mobile-team4.webp    1x,
-                    ./images/mobile/mobile-team4-x2.webp 2x,
-                    ./images/mobile/mobile-team4.jpg     1x,
-                    ./images/mobile/mobile-team4-x2.jpg  2x
+                    ./images/mobile/mobile-team4-x2.webp 2x
                   "
-                  type="image/webp"
-                  sizes="450"
                   media="(max-width:767px)"
+                  type="image/webp"
+                  width="450"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/mobile-team4.jpg    1x,
+                    ./images/mobile/mobile-team4-x2.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/jpg"
+                  width="450"
                 />
 
-                <img src="./images/desktop/desktop-team4.jpg" alt="photo" />
+                <img src="./images/desktop/desktop-team4.jpg" alt="photo" width="270" />
               </picture>
               <div class="trainer__tehno-card">
                 <h3 class="trainer__title">Михаил Ермаков</h3>
@@ -645,7 +736,7 @@
     <div class="backdrop is-hidden" data-backdrop>
       <div class="backdrop__modal">
         <button class="backdrop__button" data-close-modal>
-          <svg class="width" ="18" height="18">
+          <svg width="18" height="18">
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>

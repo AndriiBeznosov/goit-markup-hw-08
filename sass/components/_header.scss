@@ -55,13 +55,14 @@
     display: none;
     padding: 48px 40px;
     background-color: #ffffff;
-    width: 480px;
+    // width: 480px;
 
     &.is-open {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       margin-left: auto;
       margin-right: auto;
     }
@@ -253,6 +254,9 @@ body.menu-open .tehno__fon--card {
 
   &__item {
     position: relative;
+  }
+  &__item:last-child {
+    flex-grow: 1;
   }
 
   &__item:not(:first-child) {

@@ -12,16 +12,12 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-  
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/mobile/mobile-fon-x2.jpg);
   }
 
   @include tablet {
-    // max-width: 768px;
-    //  background-size: 768px 400px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/tablet/tablet-fon.jpg);
 
@@ -30,14 +26,12 @@
         url(../images/tablet/tablet-fon-x2.jpg);
     }
   }
+
+
   @include desktop {
     padding: 200px 0;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/desktop/desktop-fon.jpg);
-
-    // max-width: 1600px;
-    // height: 600px;
-    // background-size: 1600px 600px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),

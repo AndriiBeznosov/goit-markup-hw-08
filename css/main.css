@@ -305,6 +305,12 @@ body.menu-open .tehno__fon--card {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 414px) {
+  .nav-table__link {
+    font-size: 32px;
+    line-height: 1.46875;
+  }
+}
 @media screen and (min-width: 768px) {
   .nav-table__link {
     font-size: 14px;
@@ -401,6 +407,12 @@ body.menu-open .tehno__fon--card {
   fill: var(--link-color);
   text-decoration: none;
 }
+@media screen and (max-width: 414px) {
+  .contacts__link--mail {
+    font-size: 32px;
+    line-height: 1.46875;
+  }
+}
 @media screen and (max-width: 767px) {
   .contacts__link .contacts__icon {
     display: none;
@@ -415,6 +427,12 @@ body.menu-open .tehno__fon--card {
     font-size: 34px;
     line-height: 1.1764705882;
     color: var(--accent-color);
+  }
+}
+@media screen and (max-width: 414px) {
+  .contacts__link--tel {
+    font-size: 32px;
+    line-height: 1.46875;
   }
 }
 @media screen and (min-width: 768px) {
@@ -440,7 +458,16 @@ body.menu-open .tehno__fon--card {
 
 .soc {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 64px;
+}
+@media screen and (max-width: 414px) {
+  .soc {
+    max-width: -5px;
+  }
+  .soc__item {
+    margin: 5px;
+  }
 }
 .soc__item {
   position: relative;

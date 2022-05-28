@@ -112,6 +112,11 @@ body.menu-open .tehno__fon--card {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+  @media screen and (max-width: 414px) {
+    font-size: 32px;
+    line-height: calc(47 / 32);
+  }
+
   @include tablet {
     font-size: 14px;
     line-height: 1.142;
@@ -180,10 +185,10 @@ body.menu-open .tehno__fon--card {
 
 .contacts {
   display: flex;
+
   @include mobile-max {
     flex-direction: column-reverse;
   }
- 
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-direction: column;
@@ -209,6 +214,12 @@ body.menu-open .tehno__fon--card {
   color: var(--link-color);
   fill: var(--link-color);
   text-decoration: none;
+  @media screen and (max-width: 414px) {
+    &--mail {
+      font-size: 32px;
+      line-height: calc(47 / 32);
+    }
+  }
 
   @media screen and (max-width: 767px) {
     & .contacts__icon {
@@ -225,6 +236,12 @@ body.menu-open .tehno__fon--card {
       font-size: 34px;
       line-height: calc(40 / 34);
       color: var(--accent-color);
+    }
+  }
+   @media screen and (max-width: 414px) {
+    &--tel {
+      font-size: 32px;
+      line-height: calc(47 / 32);
     }
   }
 
@@ -250,7 +267,14 @@ body.menu-open .tehno__fon--card {
 // menu mobile сети
 .soc {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 64px;
+  @media screen and (max-width: 414px) {
+    max-width: -5px;
+    &__item {
+      margin: 5px;
+    }
+  }
 
   &__item {
     position: relative;

@@ -986,6 +986,9 @@ body.menu-open .tehno__fon--card {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (max-width: 767px) {
+  .tehno__fon--text {
+    transition-duration: 500ms;
+  }
   body.menu-open .tehno__fon--text {
     display: none;
   }

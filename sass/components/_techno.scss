@@ -84,7 +84,7 @@
   }
 }
 
-.tehno__link:focus {
+.tehno__link:hover {
   .tehno__fon--text {
     opacity: 1;
     transform: translateY(0);
@@ -95,7 +95,7 @@
 }
 
 @include tablet {
-  .tehno__link:hover {
+  .tehno__link:focus {
     .tehno__fon--text {
       opacity: 1;
       transform: translateY(0);

@@ -83,9 +83,8 @@
     padding: 33px 10px;
   }
 }
-.tehno__link:hover,
+
 .tehno__link:focus {
-  .tehno__fon--text,
   .tehno__fon--text {
     opacity: 1;
     transform: translateY(0);
@@ -94,6 +93,19 @@
     }
   }
 }
+
+@include tablet {
+  .tehno__link:hover {
+    .tehno__fon--text {
+      opacity: 1;
+      transform: translateY(0);
+      body.menu-open & {
+        opacity: 0;
+      }
+    }
+  }
+}
+
 .tehno__card {
   padding: 20px 24px;
   border-right: 1px solid var(--hero-border-color);

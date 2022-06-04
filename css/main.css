@@ -1003,20 +1003,23 @@ body.menu-open .tehno__fon--card {
   }
 }
 
-.tehno__link:hover .tehno__fon--text,
-.tehno__link:hover .tehno__fon--text,
-.tehno__link:focus .tehno__fon--text,
 .tehno__link:focus .tehno__fon--text {
   opacity: 1;
   transform: translateY(0);
 }
-body.menu-open .tehno__link:hover .tehno__fon--text,
-body.menu-open .tehno__link:hover .tehno__fon--text,
-body.menu-open .tehno__link:focus .tehno__fon--text,
 body.menu-open .tehno__link:focus .tehno__fon--text {
   opacity: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .tehno__link:hover .tehno__fon--text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  body.menu-open .tehno__link:hover .tehno__fon--text {
+    opacity: 0;
+  }
+}
 .tehno__card {
   padding: 20px 24px;
   border-right: 1px solid var(--hero-border-color);
@@ -1213,7 +1216,6 @@ body.menu-open .tehno__link:focus .tehno__fon--text {
   padding-left: 15px;
   border-radius: 4px;
   min-height: 50px;
-  margin-bottom: 20px;
   transition-property: outline;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1229,6 +1231,11 @@ body.menu-open .tehno__link:focus .tehno__fon--text {
 @media screen and (min-width: 768px) {
   .footer-form__email {
     width: 463px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .footer-form__email {
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1275,7 +1282,7 @@ body.menu-open .tehno__link:focus .tehno__fon--text {
   transition-property: opacity, visibility;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 4;
+  z-index: 11;
   overflow-y: scroll;
 }
 @media screen and (max-width: 767px) {
@@ -1490,6 +1497,12 @@ body.menu-open .tehno__link:focus .tehno__fon--text {
   border-radius: 2px;
   background-image: url(../images/icon-no-check.svg);
   transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 479px) {
+  .form-checkbox__icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .form-chackbox__checkbox:focus-visible + .form-checkbox__icon {

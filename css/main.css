@@ -982,13 +982,8 @@ body.menu-open .tehno__fon--card {
   opacity: 0;
   transition-property: transform, opacity;
   transform: translateY(100%);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (max-width: 767px) {
-  .tehno__fon--text {
-    transition-duration: 500ms;
-  }
   body.menu-open .tehno__fon--text {
     display: none;
   }
@@ -1001,6 +996,8 @@ body.menu-open .tehno__fon--card {
 }
 @media screen and (min-width: 321px) and (max-width: 370px) {
   .tehno__fon--text {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 16px;
     padding: 33px 10px;
   }

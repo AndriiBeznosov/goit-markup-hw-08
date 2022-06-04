@@ -1007,20 +1007,14 @@ body.menu-open .tehno__fon--card {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .tehno__link:focus .tehno__fon--text,
 .tehno__link:hover .tehno__fon--text {
-  opacity: 1;
-  transform: translateY(0);
-}
-body.menu-open .tehno__link:hover .tehno__fon--text {
-  opacity: 0;
-}
-
-@media screen and (min-width: 768px) {
-  .tehno__link:focus .tehno__fon--text {
     opacity: 1;
     transform: translateY(0);
   }
-  body.menu-open .tehno__link:focus .tehno__fon--text {
+  body.menu-open .tehno__link:focus .tehno__fon--text,
+body.menu-open .tehno__link:hover .tehno__fon--text {
     opacity: 0;
   }
 }

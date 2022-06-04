@@ -66,6 +66,8 @@
   padding: 63px 24px;
   opacity: 0;
   transition-property: transform, opacity;
+   transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(100%);
 
   @media screen and (max-width: 767px) {
@@ -81,14 +83,11 @@
     font-size: 16px;
     padding: 33px 10px;
   }
-  @include desktop {
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+ 
 }
 
 
-@include desktop {
+
   .tehno__link:focus,
   .tehno__link:hover {
     .tehno__fon--text {
@@ -99,7 +98,7 @@
       }
     }
   }
-}
+
 
 .tehno__card {
   padding: 20px 24px;

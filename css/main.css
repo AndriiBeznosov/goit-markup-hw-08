@@ -981,6 +981,8 @@ body.menu-open .tehno__fon--card {
   padding: 63px 24px;
   opacity: 0;
   transition-property: transform, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(100%);
 }
 @media screen and (max-width: 767px) {
@@ -1000,24 +1002,17 @@ body.menu-open .tehno__fon--card {
     padding: 33px 10px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .tehno__fon--text {
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+
+.tehno__link:focus .tehno__fon--text,
+.tehno__link:hover .tehno__fon--text {
+  opacity: 1;
+  transform: translateY(0);
+}
+body.menu-open .tehno__link:focus .tehno__fon--text,
+body.menu-open .tehno__link:hover .tehno__fon--text {
+  opacity: 0;
 }
 
-@media screen and (min-width: 1200px) {
-  .tehno__link:focus .tehno__fon--text,
-.tehno__link:hover .tehno__fon--text {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  body.menu-open .tehno__link:focus .tehno__fon--text,
-body.menu-open .tehno__link:hover .tehno__fon--text {
-    opacity: 0;
-  }
-}
 .tehno__card {
   padding: 20px 24px;
   border-right: 1px solid var(--hero-border-color);
